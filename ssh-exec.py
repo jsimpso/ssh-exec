@@ -242,8 +242,8 @@ def get_output_method(prompt):
 def sendmail(FROM, TO, message):
 	server = smtplib.SMTP('your.open.relay')
 	server.sendmail(FROM, TO, message)
-	server.quit(
-)beechinbeechin
+	server.quit()
+
 #Function used for sending mail via an SMTP relay requiring SSL
 def sendmail_ssl(FROM, TO, message):
 	server = smtplib.SMTP_SSL('ssl.smtp.server:465')
