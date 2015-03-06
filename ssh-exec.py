@@ -60,7 +60,7 @@ def get_devicenames():
 	for line in openfile:
         line = line.replace('\n','')
         line = line.replace('\r','')
-		hosts.append(line)
+        hosts.append(line)
 	return hosts
 
 #Create a list of commands from user input
