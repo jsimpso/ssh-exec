@@ -36,6 +36,7 @@ import os
 #        FUNCTIONS         #
 #                          #
 ############################
+
 #Function to open a user-specified file and extract a list of hosts
 def get_devicenames():
 	hosts = []
@@ -58,6 +59,7 @@ def get_devicenames():
 	print "Reading hosts from \'%s\'" % filename
 	for line in openfile:
 		line = line.replace('\n','')
+        line = line.replace('\r','')
 		hosts.append(line)
 	return hosts
 
@@ -240,8 +242,8 @@ def get_output_method(prompt):
 def sendmail(FROM, TO, message):
 	server = smtplib.SMTP('your.open.relay')
 	server.sendmail(FROM, TO, message)
-	server.quit()
-
+	server.quit(
+)beechinbeechin
 #Function used for sending mail via an SMTP relay requiring SSL
 def sendmail_ssl(FROM, TO, message):
 	server = smtplib.SMTP_SSL('ssl.smtp.server:465')
