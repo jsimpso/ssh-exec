@@ -58,9 +58,9 @@ def get_devicenames():
 
 	print "Reading hosts from \'%s\'" % filename
 	for line in openfile:
-         line = line.replace('\n','')
-         line = line.replace('\r','')
-         hosts.append(line)
+            line = line.replace('\n','')
+            line = line.replace('\r','')
+            hosts.append(line)
 	return hosts
 
 #Create a list of commands from user input
